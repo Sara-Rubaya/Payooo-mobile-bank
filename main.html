@@ -43,7 +43,7 @@
                     <img class="w-8 mx-auto" src="assets/money1.png" alt="">
                     <h3>Pay bill</h3>
                 </div>
-                <div class="box border p-4 text-center rounded-sm">
+                <div id="transection-box" class="box border p-4 text-center rounded-sm">
                     <img class="w-8 mx-auto" src="assets/wallet1.png" alt="">
                     <h3>Transaction history</h3>
                 </div>
@@ -60,7 +60,7 @@
                         <div class="card-body">
                             <legend>Select Bank</legend>
                             <select class="select">
-                                <option disabled selected>Select Bank</option>
+                                <option id="selectedBank" disabled selected>Select Bank</option>
                                 <option value="Bkash">Bkash</option>
                                 <option value="DBBl">DBBl</option>
                                 <option value="Nogod">Nogod</option>
@@ -80,23 +80,33 @@
                     </div>
                   </div>
             </section>
+            <section id="cash-out">
+                <h2>Cash Out</h2>
+                <fieldset class="fieldset">
+                    <label class="fieldset-label">Account Number</label>
+                    <input value="01301301302" id="account-number" type="number" class="input" placeholder="Account number" required />
+                    <label class="fieldset-label">Amount </label>
+                    <input  id="cash-out-amount" type="number" class="input" placeholder="Type your amount" required />
+                    <label class="fieldset-label">PIN</label>
+                    <input value="1234" id="cash-out-pin" type="text" class="input" placeholder="PIN" required/>
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button id="caash-out-btn" type="submit" id="login-btn" class="btn border-none btn-neutral bg-blue-700 mt-4">Cash out</button>
+                  </fieldset>
+    
+            </section>
+            <section id="transection-history">
+                <h1 class="text-3xl font-bold text-red-400 text-center p-3">Transection History</h1>
+
+                <div id="transection-container">
+
+                </div>
+
+            </section>
             
         </section>
 
-        <section id="cash-out">
-            <h2>Cash Out</h2>
-            <fieldset class="fieldset">
-                <label class="fieldset-label">Account Number</label>
-                <input value="01301301302" id="account-number" type="number" class="input" placeholder="Account number" required />
-                <label class="fieldset-label">Amount </label>
-                <input  id="cash-out-amount" type="number" class="input" placeholder="Type your amount" required />
-                <label class="fieldset-label">PIN</label>
-                <input value="1234" id="cash-out-pin" type="text" class="input" placeholder="PIN" required/>
-                <div><a class="link link-hover">Forgot password?</a></div>
-                <button id="caash-out-btn" type="submit" id="login-btn" class="btn border-none btn-neutral bg-blue-700 mt-4">Cash out</button>
-              </fieldset>
+       
 
-        </section>
     </header>
 
    </section>
@@ -105,5 +115,6 @@
    
    <script src="script/cashout.js"></script>
    <script src="script/utilities.js"></script>
+ <script src="script/transection.js"></script>
 </body>
 </html>
